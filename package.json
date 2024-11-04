@@ -1,0 +1,35 @@
+{
+  "name": "rsfcm",
+  "version": "0.0.0",
+  "description": "A content manager for Rallysimfans",
+  "main": "electron/main.js",
+  "build": {
+    "appId": "se.tobier.rsfcm",
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "electron": "electron electron/main.js",
+    "electron:build": "yarn build && electron electron/main.js",
+    "package": "electron-builder"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.0.2",
+    "electron-builder": "^25.1.8",
+    "solid-devtools": "^0.29.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11",
+    "vite-plugin-solid": "^2.8.2"
+  },
+  "dependencies": {
+    "solid-js": "^1.8.11"
+  }
+}
