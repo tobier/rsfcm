@@ -8,7 +8,7 @@ function createWindow() {
         show: false,
         backgroundColor: '#282c34', // Set a custom background color
         webPreferences: {
-            devTools: false,
+            devTools: true,
             nodeIntegration: true,
             contextIsolation: true,
         }
@@ -17,8 +17,8 @@ function createWindow() {
     win.loadFile(path.join(__dirname, '../dist/index.html'));
 
     win.once('ready-to-show', () => {
-        Menu.setApplicationMenu(null);
-        win.setMenuBarVisibility(false);
+        //Menu.setApplicationMenu(null);
+        //win.setMenuBarVisibility(false);
         win.show();
     });
 
